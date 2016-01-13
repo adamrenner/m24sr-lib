@@ -494,7 +494,7 @@ uint16_t M24SR_SelectApplication ( void )
     return status;
 	
 Error :
-	digitalWrite(DBG_PIN,HIGH);
+//	digitalWrite(DBG_PIN,HIGH);
     return M24SR_ERROR_I2CTIMEOUT;
 }
 
