@@ -46,8 +46,11 @@
 #define TAKE_SESSION												0xFFFF	 
 	 
 /* M24SR buffer size is 0xF6 can be retrieve dynamicaly in CC file */
-#define M24SR_READ_MAX_NBBYTE								0xF6 
-#define M24SR_WRITE_MAX_NBBYTE							0xF6
+// #define M24SR_READ_MAX_NBBYTE								0xF6 
+// #define M24SR_WRITE_MAX_NBBYTE							0xF6
+/* Arduino has a 32 byte limit on its i2c interface, need to leave a little extra room for C-ADPU overhead*/
+#define M24SR_READ_MAX_NBBYTE               0x1b 
+#define M24SR_WRITE_MAX_NBBYTE              0x1b
 
 
 #define NDEF_SESSION_CLOSED									0xDEADBEEF
