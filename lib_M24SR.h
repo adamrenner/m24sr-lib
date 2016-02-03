@@ -50,7 +50,7 @@
 // #define M24SR_WRITE_MAX_NBBYTE							0xF6
 /* Arduino has a 32 byte limit on its i2c interface, need to leave a little extra room for C-ADPU overhead*/
 #define M24SR_READ_MAX_NBBYTE               0x1b 
-#define M24SR_WRITE_MAX_NBBYTE              0x1b
+#define M24SR_WRITE_MAX_NBBYTE              0x16
 
 
 #define NDEF_SESSION_CLOSED									0xDEADBEEF

@@ -339,6 +339,7 @@ static uint16_t M24SR_FWTExtension ( uint8_t FWTbyte )
 	
 	/* send the request */ 
 	errchk( M24SR_SendI2Ccommand ( NthByte , pBuffer ));
+    delay(10);//delay was necessary here with esp8266
 	errchk( M24SR_IsAnswerReady ( ));
 	/* read the response */ 
 	errchk( M24SR_ReceiveI2Cresponse ( M24SR_STATUSRESPONSE_NBBYTE , pBuffer ));
